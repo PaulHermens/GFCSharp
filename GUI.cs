@@ -15,11 +15,15 @@ namespace Game_Foundation {
 		public GUI() {
 			InitializeComponent();
 
-			renderer = new Renderer(graphicsPanel);
+			renderer = new Renderer(ref graphicsPanel);
 		}
 
 		private void OnFormClosing(object sender, FormClosingEventArgs e) {
 			renderer.Stop();
+		}
+
+		private void OnResizeEnd(object sender, EventArgs e) {
+			renderer.ReInit();
 		}
 	}
 }

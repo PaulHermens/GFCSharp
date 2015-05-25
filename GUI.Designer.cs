@@ -38,6 +38,7 @@
 			this.ShowIcon = false;
 			this.Text = "Game Foundation";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OnFormClosing);
+			this.ResizeEnd += new System.EventHandler(this.OnResizeEnd);
 			this.ResumeLayout(false);
 
 		}
